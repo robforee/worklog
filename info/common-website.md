@@ -5,35 +5,73 @@
 jq -c '.["Browser History"][1:] | .[] | [.time_usec, .url]' Takeout/Chrome/BrowserHistory.json | sed 's/.*\:\/\///' | sed 's/\/.*//' | sed 's/www\.//' >BrowserHistory.domains
 sort BrowserHistory.domains | uniq -c | sort -n
 
-## top results
+## google queries
+3565 queries / 137 = 26 queries per day
 
-   9754 docs.google.com
-   6078 google.com
-   3257 newtab
-   2673 mail.google.com
-   2631 netflix.com
-   2249 github.com
-   1748 drive.google.com
-   1627 notion.so
-   1323 bootcampspot.com
-   1032 calendar.google.com
-    994 reddit.com
-    658 linkedin.com
-    613 indeed.com
-    448 amazon.com
-    396 scenariolab.com
-    373 192.168.1.254
-    325 medicare.gov
-    323 photos.google.com
-    319 capps.taleo.net
-    311 datastudio.google.com
-    305 zoom.us
-    234 stackoverflow.com
-    226 docs.microsoft.com
-    208 developers.google.com
-    202 niccs.cisa.gov
-    196 washingtonpost.com
-    192 ercot.com
-    182 youtube.com
-    172 publicstorage.com
+## cli notes 
+4447 lines in 243 files / 137 = 33 lines per day
+## notes in freemind
+20,622 rows in 40 files / 137 = 150 lines per day
+
+
+## manage notes in notion
+1003 notion.so
+
+## learning special
+165 splunk
+132 stackoveflow.com
+126 nist.gov
+
+## manage existing
+188 datastudio.google.com
+171 developers.google.com
+
+## browser hits on github
+1658 browser hits / 137 = 12 per day
+
+#
+1003 notion.so
+498 reddit.com
+188 datastudio.google.com
+171 developers.google.com
+165 splunk.com
+132 stackoverflow.com
+75 kali.org
+67 nist.gov
+59 nvd.nist.gov
+
+## top 30 results over bootcamp ending Dec 10, 2021
+cat ~/data/google-takeout/Takeout/Chrome/BrowserHistory.bootcamp
+
+	192 days
+
+   7429 docs.google.com = 38
+   3565 google.com      = 19
+   1921 newtab
+   1658 github.com      = 9
+   1471 mail.google.com
+   1305 bootcampspot.com
+   1205 drive.google.com  = 6
+   1005 netflix.com
+   1003 notion.so
+    979 calendar.google.com
+    498 reddit.com
+    480 linkedin.com
+    315 medicare.gov
+    314 photos.google.com
+    301 zoom.us
+    240 amazon.com
+    188 datastudio.google.com
+    181 niccs.cisa.gov
+    171 developers.google.com
     166 secure.ssa.gov
+    157 publicstorage.com
+    156 ercot.com
+    147 docs.microsoft.com
+    144 localhost
+    132 stackoverflow.com
+    118 kahoot.it
+     97 192.168.1.254
+     96 washingtonpost.com
+     95 splunk.com
+     91 youtube.com
